@@ -5,7 +5,8 @@ namespace App;
 
 require_once('./src/View.php');
 
-$pageParam = htmlentities($_GET['page']) ?? 'home';
+const DEFAULTPAGE = 'home';
+$pageParam = $_GET['page'] ?? DEFAULTPAGE ;
 
 $view = new View();
-$view->render($pageParam);
+$view->render(htmlentities($pageParam));

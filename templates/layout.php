@@ -23,7 +23,7 @@
               <a class="nav-link" href="?page=createuser">Create User</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Create Database</a>
+              <a class="nav-link" href="?page=createdb">Create Database</a>
             </li>
           </ul>
           <form class="d-flex">
@@ -36,7 +36,7 @@
 <!-- Page content START -->
     <div class="container mt-3">
         <h1>Place for content</h1>
-        <?php include_once("templates/views/$page.php") ?>
+        <?php include_once("templates/views/{$page}.php") ?>
     </div>
 <!-- Page content END -->
 
@@ -44,9 +44,9 @@
 <!-- Footer source: https://mdbootstrap.com/docs/standard/navigation/footer/ -->
   <footer class="bg-dark text-center text-white fixed-bottom">
     <!-- Grid container -->
-    <div class="container p-4 pb-0">
+    <div class="container p-2 pb-0">
     <!-- Section: Social media -->
-    <section class="mb-4">
+    <section class="mb-2">
       <!-- Facebook -->
       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
         ><i class="fab fa-facebook-f"></i
