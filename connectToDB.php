@@ -8,7 +8,6 @@ use App\DotEnv;
 
 (new DotEnv(__DIR__ . '/.env'))->load();
 
-
 echo getenv('DATABASE_DNS');
 // mysql:host=localhost;dbname=test;
 
