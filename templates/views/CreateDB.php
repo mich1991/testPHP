@@ -1,12 +1,17 @@
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center align-items-center">
   <div class="spinner-border" role="status">
     <span class="visually-hidden">Loading...</span>
-  </div>
+</div>
+<span class="px-2">Creating database in progress...</span>
 </div>
 
 <?php 
-    require_once('./csvConverter.php');
+    use App\DataBaseController;
+    $dbController = new DataBaseController();
+
+    echo $dbController;
     use App\csvConverter;
     $cs = new csvConverter('./test-php-user-directory/sampla-data.csv');
     $cs->uploadData();
+    // header("Location: ?page=home");
 ?>
