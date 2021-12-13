@@ -1,19 +1,19 @@
 <div class="card border-dark p-5">
-    <form action="/?page=createuser&action=create" method="post" data-action='create'>
+    <form action="?page=createuser" method="post" data-action='create'>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingFirstName" name="firstName" placeholder="name@example.com">
+            <input type="text" class="form-control" id="floatingFirstName" name="firstName" placeholder="name@example.com" required> 
             <label for="floatingFirstName">First Name</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingLastName" name="lastName" placeholder="LastName">
+            <input type="text" class="form-control" id="floatingLastName" name="lastName" placeholder="LastName" required>
             <label for="floatingLastName">Last Name</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="float" class="form-control" id="floatingHeight" name="height" placeholder="180cm">
+            <input type="float" class="form-control" id="floatingHeight" name="height" placeholder="180cm" required>
             <label for="floatingHeight">Height (cm)</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="date" class="form-control" id="floatingDate" name="birthday" placeholder="Date">
+            <input type="date" class="form-control" id="floatingDate" name="birthday" placeholder="Date" required>
             <label for="floatingDate">Birthday</label>
         </div>
         <div class="form-check form-switch">
@@ -25,5 +25,5 @@
 </div>
 
 <?php 
-var_dump($_POST)
+var_dump($_POST);
 ?>

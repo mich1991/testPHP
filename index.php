@@ -13,12 +13,11 @@ $request = [
     'post' => $_POST
   ];
   
-
-$dbController = new DataBaseController(DB_USER, DB_PASS,DB_NAME);
+$dbController = new DataBaseController(DB_USER, DB_PASS,DB_NAME, $request);
 
 // $dbController->createDB();
 const DEFAULTPAGE = 'home';
 $pageParam = $_GET['page'] ?? DEFAULTPAGE ;
 
 $view = new View();
-$view->render(htmlentities($pageParam));
+$view->render(htmlentities($pageParam) , $request['post']);
