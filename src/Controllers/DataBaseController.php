@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App;
 
+
+
 class DataBaseController{
 
     private static $dbusername;
@@ -13,18 +15,18 @@ class DataBaseController{
     public function __construct($name, $password, $dbname){
         self::$dbusername = $name;
         self::$dbpassword = $password;     
-        self::$dbname = $dbname;     
-    }
+        self::$dbname = $dbname;
 
-    public function createDB():void{
         try {
-            $pdo = new PDO("mysql:host=localhost", $this->dbusername, $this->dbpassword);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo = new \PDO("mysql:host=localhost", self::$dbusername, self::$dbpassword);
+            $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
             $pdo->query("CREATE DATABASE IF NOT EXISTS $dbname");
-            $pdo->query("use $this->dbname");
+            $pdo->query("use " . $dbname);
             echo"success";
         } catch (Excepetion $e) {
             throw $e;
         }
     }
+
+
 }

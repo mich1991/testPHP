@@ -42,7 +42,7 @@
 
 <!-- Footer START-->
 <!-- Footer source: https://mdbootstrap.com/docs/standard/navigation/footer/ -->
-  <footer class="bg-dark text-center text-white fixed-bottom">
+  <footer class="bg-dark text-center text-white fixed-bottomzz">
     <!-- Grid container -->
     <div class="container p-2 pb-0">
     <!-- Section: Social media -->

@@ -6,12 +6,5 @@
 </div>
 
 <?php 
-    use App\DataBaseController;
-    $dbController = new DataBaseController();
 
-    echo $dbController;
-    use App\csvConverter;
-    $cs = new csvConverter('./test-php-user-directory/sampla-data.csv');
-    $cs->uploadData();
-    // header("Location: ?page=home");
 ?>
